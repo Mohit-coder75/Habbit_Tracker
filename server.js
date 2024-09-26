@@ -5,10 +5,9 @@ import { fileURLToPath } from 'url';
 import connectDB from './config/db.js';
 // import { createUser } from './controller/user.controller.js';
 import userRoutes from './routes/user.routes.js';
-<<<<<<< HEAD
-=======
+
 import homeRoutes from './routes/home.routes.js'
->>>>>>> 4aa8f41 (update)
+
 
 const server = express();
 
@@ -17,28 +16,28 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 server.use(ejsLayouts);
 //parse form data..........................
-<<<<<<< HEAD
+
 server.use(express.urlencoded({extended:true}))
 
 // Set the view engine to EJS
 server.set('view engine', 'ejs');
 server.set('views',path.join(path.resolve(),
 'views') )
-=======
+
 server.use(express.urlencoded({ extended: true }))
 
 // Set the view engine to EJS
 server.set('view engine', 'ejs');
 server.set('views', path.join(path.resolve(),
     'views'))
->>>>>>> 4aa8f41 (update)
+
 // Set the directory for views with an absolute path
 server.set('views', path.join(__dirname, 'views'));
 
 // Serve static files from the "Public" directory
 server.use(express.static(path.join(__dirname, 'Public')));
 server.use('/', userRoutes);
-<<<<<<< HEAD
+
 
 // Define routes for different pages
 
@@ -46,7 +45,10 @@ server.use('/', userRoutes);
 server.get('/', (req, res) => {
     res.render('layout', { 
         title: 'Home', 
-=======
+        body: '' // Dynamically include home.ejs
+    });
+});
+
 server.use('/',homeRoutes);
 
 
@@ -54,16 +56,11 @@ server.use('/',homeRoutes);
 server.get('/', (req, res) => {
     res.render('layout', {
         title: 'Home',
->>>>>>> 4aa8f41 (update)
+
         body: '' // Dynamically include home.ejs
     });
 });
 
-<<<<<<< HEAD
-// server.post('/register',createUser);
-
-=======
->>>>>>> 4aa8f41 (update)
 
 // Start the server
 const PORT = process.env.PORT || 3000;
