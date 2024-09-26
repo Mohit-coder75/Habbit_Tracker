@@ -1,18 +1,10 @@
 /* css for nav */
 /* General reset */
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-=======
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
->>>>>>> 4aa8f41 (update)
 
 header {
     background-color: #f4f4f4;
@@ -50,11 +42,3 @@ li:hover {
     text-decoration: underline; /* Add underline on hover */
 }
 
-/* home css */
-<<<<<<< HEAD
-#bg-img{
-    background-image: url(./images/home-Photoroom.png);
-    background-size: cover;
-}
-=======
->>>>>>> 4aa8f41 (update)
